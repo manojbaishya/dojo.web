@@ -6,5 +6,4 @@ getLocationBtn.addEventListener("click", () => {
     geolocation.writePosition(document.getElementById("location"));
 });
 
-
 requests.writeData();

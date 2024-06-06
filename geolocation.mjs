@@ -7,7 +7,6 @@
  * @param {HTMLElement} element
  */
 export async function writePosition(element) {
-
     try {
         const [position, timestamp] = await getLocation();
         logPosition(position, timestamp);
@@ -16,7 +15,6 @@ export async function writePosition(element) {
         console.error(err.message);
     }
 }
-
 
 /**
  * Get Location Asynchronously
@@ -30,16 +28,20 @@ function getLocation() {
             const geolocation = navigator.geolocation;
 
             geolocation.getCurrentPosition(
-                pos => { resolve([pos.coords, pos.timestamp]); },
-                err => { reject(err) },
+                (pos) => {
+                    resolve([pos.coords, pos.timestamp]);
+                },
+                (err) => {
+                    reject(err);
+                },
                 {
                     enableHighAccuracy: false,
                     maximumAge: 0,
-                    timeout: 5000
-                }
+                    timeout: 5000,
+                },
             );
         } else {
-            reject(new Error('ERROR: Geolocation not supported!'));
+            reject(new Error("ERROR: Geolocation not supported!"));
         }
     });
 }
@@ -57,7 +59,6 @@ function logPosition(pos, time) {
     console.log(`Altitude - ${pos.altitude}`);
     console.log(`Timestamp - ${time}`);
 }
-
 
 /**
  * Description placeholder

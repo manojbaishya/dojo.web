@@ -1,8 +1,8 @@
 interface movieResponse {
-    page: number,
-    results: Result[]
+    page: number;
+    results: Result[];
 }
 
 interface Result {
-    adult: boolean
+    adult: boolean;
 }
