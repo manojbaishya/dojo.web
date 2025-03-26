@@ -1,7 +1,16 @@
 {
     "compilerOptions": {
+        "moduleResolution": "bundler",
         "module": "ESNext",
         "target": "ESNext",
-        "checkJs": false
+        "checkJs": true,
+        "paths": {
+            "faker/*": [
+                "./node_modules/@faker-js/faker/*"
+            ],
+            "faker": [
+                "./node_modules/@faker-js/faker"
+            ]
+        }
     }
 }

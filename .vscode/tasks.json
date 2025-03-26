@@ -2,13 +2,15 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "miniserve",
             "type": "shell",
-            "command": "miniserve --index index.html",
+            "label": "pnpm: dev",
+            "command": "pnpm run dev",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": [],
+            "problemMatcher": [
+                "$vite"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

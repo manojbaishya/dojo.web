@@ -1,4 +1,4 @@
-import { faker } from 'https://esm.run/@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 /**
  * Generate email data
@@ -10,7 +10,7 @@ import { faker } from 'https://esm.run/@faker-js/faker';
 export function SeedEmails(count) {
     const emails = [];
     for (let idx = 0; idx < count; idx++) {
-        emails.push(faker.internet.email());  
+        emails.push(faker.internet.email());
     }
     return emails;
 }

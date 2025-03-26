@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,33 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Playground</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="index.css">
-
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://esm.sh/three@0.166.1/build/three.module.js",
-                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"
-            }
-        }
-    </script>
-
-    <script type="module" src="main.mjs"></script>
+    <link rel="stylesheet" href="/src/index.css">
+    <script type="module" src="/src/main.mjs"></script>
 </head>
 
 <body>
-    <h1>Javascript and Web Playground</h1>
-
-    <hr />
-    <h2>Geolocation</h2>
-    <button type="button" id="getLocationBtn">Get Location</button>
-    <p id="location"></p>
-
-    <hr />
-
-    <button type="button" id="testEmailRegexBtn">Test Email Regex</button>
-    <hr />
-
+    <main>
+        <h1>Javascript and Web Playground</h1>
+        <hr />
+        <h2>Geolocation</h2>
+        <button type="button" id="getLocationBtn">Get Location</button>
+        <p id="location"></p>
+        <hr />
+        <button type="button" id="testEmailRegexBtn">Test Email Regex</button>
+        <hr />
+    </main>
 </body>
 
 </html>
