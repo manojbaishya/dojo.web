@@ -2,11 +2,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "five-server",
+            "label": "miniserve",
             "type": "shell",
-            "command": "five-server",
+            "command": "miniserve --index index.html",
             "options": {
                 "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         }
     ]

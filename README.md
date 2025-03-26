@@ -5,6 +5,6 @@ Serve root directory with a static file server:
 ```
 git clone <repo>
 cd <repo>
-npm -g i five-server@latest
-five-server
+cargo install --locked miniserve
+miniserve --index index.html
 ```

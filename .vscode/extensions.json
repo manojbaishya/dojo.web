@@ -1,3 +1,5 @@
 {
-	"recommendations": ["yandeu.five-server", "biomejs.biome"]
+    "recommendations": [
+        "biomejs.biome"
+    ]
 }
