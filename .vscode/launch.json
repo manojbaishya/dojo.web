@@ -6,7 +6,8 @@
             "request": "launch",
             "name": "Chrome (localhost)",
             "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "pnpm: dev"
         }
     ]
 }

@@ -22,6 +22,12 @@ export function Demo() {
     camera.position.z = 5;
 }
 
+/**
+ * @param {THREE.Scene} scene
+ * @param {THREE.PerspectiveCamera} camera
+ * @param {THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial, THREE.Object3DEventMap>} cube
+ * @param {THREE.WebGLRenderer} renderer
+ */
 function animate(scene, camera, cube, renderer) {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
