@@ -14,7 +14,7 @@ const animationDuration = 400; // ms
 let visibleModal = null;
 
 // Toggle modal
-const toggleModal = (event) => {
+function toggleModal(event) {
     event.preventDefault();
     const modal = document.getElementById(event.currentTarget.dataset.target);
     if (!modal) return;
@@ -47,6 +47,22 @@ const closeModal = (modal) => {
         modal.close();
     }, animationDuration);
 };
+
+// Attach to launchDemoModal
+const launchDemoModal = document.getElementById("launchDemoModal");
+launchDemoModal.addEventListener('click', toggleModal);
+
+// Attach to showModalBtn
+const showModalBtn = document.getElementById("showModalBtn");
+showModalBtn.addEventListener('click', toggleModal);
+
+// Attach to cancelModalBtn
+const cancelModalBtn = document.getElementById("cancelModalBtn");
+cancelModalBtn.addEventListener('click', toggleModal);
+
+// Attach to confirmModalBtn
+const confirmModalBtn = document.getElementById("confirmModalBtn");
+confirmModalBtn.addEventListener('click', toggleModal);
 
 // Close with a click outside
 document.addEventListener("click", (event) => {

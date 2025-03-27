@@ -10,9 +10,11 @@ export function Demo() {
     );
 
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
     renderer.setAnimationLoop(() => animate(scene, camera, cube, renderer));
-    document.body.appendChild(renderer.domElement);
+
+    const container = document.getElementById("three-app");
+    container.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
