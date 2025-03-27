@@ -8,5 +8,17 @@ export function TestEmailRegex() {
     const emails = SeedEmails(10);
     const results = emails.map(email => regexValidators.email.test(email));
     const mapResults = Object.fromEntries(emails.map((key, idx) => [key, results[idx]]));
-    console.log(mapResults);
+
+    const emailContent = document.getElementById("emailContent");
+    emailContent.innerHTML = convertValidationToString(mapResults);
+}
+
+function convertValidationToString(mapResults) {
+    const strs = [];
+
+    for (const email in mapResults) {
+        strs.push(`${email}: ${mapResults[email].toString()}`);
+    }
+
+    return strs.join('<br>');
 }

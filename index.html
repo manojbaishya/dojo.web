@@ -12,7 +12,27 @@
 </head>
 
 <body>
+    <header class="container">
+        <hgroup>
+            <h1 id="pagetitle">Javascript and Web Playground</h1>
+        </hgroup>
+    </header>
     <main class="container">
+        <section>
+            <h2>Pico.CSS Reference</h2>
+            <a href="/cssref.html">CSS Showcase</a>
+        </section>
+
+        <section>
+            <h2>Web Workers</h2>
+            <p>
+                <span>Output: </span>
+                <span id="workerHook"></span>
+            </p>
+            <button id="startWorker" class="contrast outline">Start Worker</button>
+            <button id="stopWorker" class="contrast outline">Stop Worker</button>
+        </section>
+
         <section>
             <h2>Geolocation</h2>
             <button class="contrast" type="button" id="getLocationBtn">Get Location</button>
@@ -23,11 +43,7 @@
         <section>
             <h2>Regex</h2>
             <button class="contrast" type="button" id="testEmailRegexBtn">Test Email Regex</button>
-        </section>
-        <br>
-        <section>
-            <h2>Pico.CSS Reference</h2>
-            <a href="/cssref.html">CSS Showcase</a>
+            <p id="emailContent"></p>
         </section>
 
         <section>
